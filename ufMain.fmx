@@ -1,0 +1,44 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Angular Gauge Skia - Modified from GDI+ version by Malonn'
+  ClientHeight = 390
+  ClientWidth = 454
+  Position = MainFormCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object SkPaintBox: TSkPaintBox
+    Align = Client
+    Size.Width = 454.000000000000000000
+    Size.Height = 349.000000000000000000
+    Size.PlatformDefault = False
+    OnDraw = SkPaintBoxDraw
+  end
+  object btnRandom: TButton
+    Align = Bottom
+    Position.Y = 368.000000000000000000
+    Size.Width = 454.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Random Setting'
+    OnClick = btnRandomClick
+  end
+  object chkColorScale: TCheckBox
+    Align = Bottom
+    Position.Y = 349.000000000000000000
+    Size.Width = 454.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Use a Color Scale'
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 40
+    Top = 40
+  end
+end
